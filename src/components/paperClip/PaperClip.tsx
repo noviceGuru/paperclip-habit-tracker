@@ -1,3 +1,3 @@
 export default function PaperClip(){
-    return <div>PaperClip</div>    
+    return <div className="bg-slate-400">PaperClip</div>    
 }
