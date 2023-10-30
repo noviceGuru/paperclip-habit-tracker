@@ -1,27 +1,17 @@
-# React + TypeScript + Vite
+# PaperClip Habit Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In 1993, a bank in Abbotsford, Canada, hired a twenty-three-year-old
+stockbroker named Trent Dyrsmid. Abbotsford was a relatively small
+suburb, tucked away in the shadow of nearby Vancouver, where most
+of the big business deals were being made. Given the location, and the
+fact that Dyrsmid was a rookie, nobody expected too much of him. But
+he made brisk progress thanks to a simple daily habit.
+Dyrsmid began each morning with two jars on his desk. One was
+filled with 120 paper clips. The other was empty. As soon as he settled
+in each day, he would make a sales call. Immediately after, he would
+move one paper clip from the full jar to the empty jar and the process
+would begin again. “Every morning I would start with 120 paper clips
+in one jar and I would keep dialing the phone until I had moved them
+all to the second jar,”
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+From `Atomic Habits` by `James Clear`
