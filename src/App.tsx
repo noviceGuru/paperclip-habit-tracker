@@ -19,7 +19,7 @@ function App() {
             <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center">
                 How many are we doing today?
                 <input
-                    className="border-solid border-amber-200 border-4 rounded-lg"
+                    className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 outline-none"
                     ref={inputRef}
                     onChange={e => console.log(e.target.value)}
                 />
