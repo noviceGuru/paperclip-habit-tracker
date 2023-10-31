@@ -9,7 +9,7 @@ export default function Jar({
 }) {
     return (
         <div
-            className="flex flex-col-reverse items-center border-solid border-l-2 border-r-2 border-b-2 border-red-700 rounded-3xl w-40 p-2 gap-4 relative"
+            className="relative border-solid border-l-2 border-r-2 border-b-2 border-red-700 rounded-3xl w-28 sm:w-32 md:w-36 p-2 gap-4"
             onClick={onClick}
         >
             {paperClipNumbers.map((paperClip, index) => (
