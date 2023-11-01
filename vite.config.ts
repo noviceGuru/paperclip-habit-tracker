@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base:'/paperclip-habit-tracker/',
   plugins: [react()],
+  build: {
+    outDir: './build'
+  }
 })
