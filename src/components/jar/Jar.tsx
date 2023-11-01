@@ -1,4 +1,5 @@
 import PaperClip from "../paperClip/PaperClip"
+import JarSvg from "./JarSvg"
 
 export default function Jar({
     paperClipNumbers,
@@ -8,13 +9,18 @@ export default function Jar({
     onClick: () => void
 }) {
     return (
-        <div
-            className="relative border-solid border-l-2 border-r-2 border-b-2 border-red-700 rounded-3xl w-28 sm:w-32 md:w-36 p-2 gap-4"
-            onClick={onClick}
-        >
-            {paperClipNumbers.map((paperClip, index) => (
-                <PaperClip key={index} rotated={paperClip[0]} position={paperClip}/>
-            ))}
-        </div>
+        <>
+            <div className="relative w-24 sm:w-32 md:w-34" onClick={onClick}>
+                <JarSvg 
+                className="absolute bottom-0 left-0 "/>
+                {paperClipNumbers.map((paperClip, index) => (
+                    <PaperClip
+                        key={index}
+                        rotated={paperClip[0]}
+                        position={paperClip}
+                    />
+                ))}
+            </div>
+        </>
     )
 }
