@@ -12,6 +12,6 @@ in each day, he would make a sales call. Immediately after, he would
 move one paper clip from the full jar to the empty jar and the process
 would begin again. “Every morning I would start with 120 paper clips
 in one jar and I would keep dialing the phone until I had moved them
-all to the second jar,”
+all to the second jar”.
 
 From `Atomic Habits` by `James Clear`

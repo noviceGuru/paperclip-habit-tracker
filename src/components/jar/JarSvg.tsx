@@ -6,7 +6,7 @@ export default function JarSvg({ className }: { className?: string }) {
             version="1.1"
             x="0px"
             y="0px"
-            enable-background="new 0 0 256 256"
+            enableBackground="new 0 0 256 256"
             xmlSpace="preserve"
             viewBox="57.6 10.1 140.74 236.04"
             className={className}
