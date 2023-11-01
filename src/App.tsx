@@ -15,16 +15,16 @@ function App() {
     }
 
     return (
-        <div className="p-10 h-full flex flex-col">
-            <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center">
-                How many are we doing today?
+        <div className="p-10 h-full flex flex-col gap-32">
+            <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl">
+                <span className="flex items-center h-full">How many are we doing today?</span>
                 <input
                     className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none"
                     ref={inputRef}
                     onChange={e => console.log(e.target.value)}
                 />
                 <button
-                    className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1"
+                    className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1 select-none"
                     onClick={hanldeClickGo}
                 >
                     Go!

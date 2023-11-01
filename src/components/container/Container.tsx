@@ -26,9 +26,9 @@ export default function JarContainer({
     }
 
     return (
-        <div className="p-10 flex flex-col gap-10 justify-center h-full self-center">
-            <span className="self-center select-none">{right} Done!</span>
-            <div className="flex gap-12 justify-center h-1/2 w-3/4 sm:w-full self-center">
+        <div className="p-10 flex flex-col gap-36 justify-center h-full self-center">
+            <span className="self-center select-none h-6">{!!(totalNum) && `${right} Done!`}</span>
+            <div className="flex gap-12 justify-center self-center h-1/4">
                 <Jar
                     key="left"
                     paperClipNumbers={[

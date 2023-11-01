@@ -1,4 +1,6 @@
-export default function PaperClipSvg({ className }: { className: string }) {
+import { CSSProperties } from "react"
+
+export default function PaperClipSvg({ className, style }: { className?: string, style?: CSSProperties }) {
     return (
         <svg
             fill="#000000"
@@ -7,6 +9,7 @@ export default function PaperClipSvg({ className }: { className: string }) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 950 950"
             className={className}
+            style={style}
         >
             <g>
                 <path

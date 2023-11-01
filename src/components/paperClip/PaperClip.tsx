@@ -1,13 +1,20 @@
 import PaperClipSvg from "../icons/PaperClipIcon"
 
-export default function PaperClip({ rotated, position }: { rotated: number, position: [number, number, number] }) {
-    
+export default function PaperClip({
+    position,
+}: {
+    position: [number, number, number]
+}) {
     return (
-        <div
-            style={{transform: `rotate(${rotated}deg)`, right:position[0], bottom: position[1]}}
-            className="absolute"
-        >
-            <PaperClipSvg className="w-6" />
-        </div>
+        <PaperClipSvg
+            style={{
+                transform: `rotate(${position[0]}deg)`,
+                height: "24px",
+                width: "24px",
+                right: position[1]%70,
+                bottom: position[2],
+                position: "absolute"
+            }}
+        />
     )
 }

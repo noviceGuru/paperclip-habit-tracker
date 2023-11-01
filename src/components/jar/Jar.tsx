@@ -10,13 +10,12 @@ export default function Jar({
 }) {
     return (
         <>
-            <div className="relative w-24 sm:w-32 md:w-34" onClick={onClick}>
+            <div className="relative w-24" onClick={onClick}>
                 <JarSvg 
                 className="absolute bottom-0 left-0 "/>
                 {paperClipNumbers.map((paperClip, index) => (
                     <PaperClip
                         key={index}
-                        rotated={paperClip[0]}
                         position={paperClip}
                     />
                 ))}
