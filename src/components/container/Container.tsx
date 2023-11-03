@@ -39,7 +39,7 @@ export default function JarContainer({
                 <Jar
                     key="right"
                     paperClipNumbers={
-                        right > 0 ? [...paperClipPositions.slice(-right)] : []
+                        right > 0 ? [...paperClipPositions.slice(-right).reverse()] : []
                     }
                     onClick={() => jarClickHandler("toLeft")}
                 />
