@@ -12,10 +12,15 @@ function App() {
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const number = parseInt(e.target.value)
 
+        if (e.target.value === "") {
+            setInputValue(0)
+            return
+        }
+
         if (!isNaN(number)) {
             const number = parseInt(e.target.value)
 
-            if (number >= 1 && number <= 300) {
+            if (number >= 0 && number <= 300) {
                 setInputValue(number)
             }
         }
@@ -41,8 +46,9 @@ function App() {
                         onChange={onInputChange}
                     />
                     <button
-                        className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1 select-none"
+                        className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1 select-none disabled:opacity-0 transition-all duration-150"
                         onClick={hanldeClickGo}
+                        disabled={!inputValue}
                     >
                         Go!
                     </button>
