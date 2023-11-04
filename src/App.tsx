@@ -32,6 +32,12 @@ function App() {
         )
     }
 
+    const onInputEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            hanldeClickGo()
+        }
+    }
+
     return (
         <div className="h-full relative">
             <Overlay/>
@@ -44,6 +50,7 @@ function App() {
                         className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none"
                         value={inputValue}
                         onChange={onInputChange}
+                        onKeyUp={onInputEnter}
                     />
                     <button
                         className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1 select-none disabled:opacity-0 transition-all duration-150"
