@@ -33,7 +33,7 @@ with another company.
 
 From `Atomic Habits` by `James Clear`
 
-# Stack and run localy
+# Stack and run locally
 I used `React` with `Vite`, `Tailwind` and deployed it with `gh-pages` package.
 
 ## To run locally
