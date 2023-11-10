@@ -7,7 +7,7 @@ export default function JarContainer({
     paperClipPositions: [number, number, number][]
 }) {
     const [right, setRight] = useState(0)
-    const [todo, setTodo] = useState<boolean>(false)
+    const [showTodo, setShowTodo] = useState<boolean>(false)
 
     useEffect(() => {
         if (paperClipPositions) {
@@ -28,10 +28,11 @@ export default function JarContainer({
     }
 
     return (
-        <div className="p-10 flex flex-col gap-36 justify-center h-full self-center">
+        <div className="flex flex-col gap-36 justify-center h-full self-center min-h-[200px]">
             <span className="self-center select-none h-6">
+            {!!totalNum && 
                 <label className="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" value="" onClick={()=>setTodo(!todo)} className="sr-only peer" />
+                    <input type="checkbox" value="" onClick={()=>setShowTodo(!showTodo)} className="sr-only peer" />
                     <div
                         className="w-40 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 
                 dark:peer-focus:ring-lime-300 rounded-full
@@ -39,9 +40,9 @@ export default function JarContainer({
                 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full 
                 after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-lime-300 text-center"
                     >
-                       {todo ? `${totalNum - right} To Do` : `${right} Done!` }
+                       {showTodo ? `${totalNum - right} To Do` : `${right} Done!` }
                     </div>
-                </label>
+                </label>}
             </span>
             <div className="flex gap-12 justify-center self-center h-1/4">
                 <Jar
