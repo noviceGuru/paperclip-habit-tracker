@@ -5,7 +5,7 @@ export default function Overlay() {
 
     return (
         show && (
-            <div className="h-full bg-lime-500 bg-opacity-50 absolute top-0 flex flex-col justify-between">
+            <div className="h-full bg-lime-500 bg-opacity-50 absolute top-0 flex flex-col justify-between z-10">
                 <div>
                     <div
                         className="right-0 cursor-pointer m-8 font-extrabold"
