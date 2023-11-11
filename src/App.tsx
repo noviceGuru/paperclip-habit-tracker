@@ -39,7 +39,7 @@ function App() {
     }
 
     return (
-        <div className="h-full relative">
+        <div className="h-full relative min-w-[290px]">
             <Overlay/>
             <div className="p-10 h-full flex flex-col gap-32">
                 <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl">
