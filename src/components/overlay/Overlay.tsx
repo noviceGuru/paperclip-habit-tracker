@@ -27,7 +27,7 @@ export default function Overlay() {
                             months, he was generating $5 million for the firm.
                             By age twenty-four, he was earning $75,000 a year
                             (equivalent to $125,000 today) and soon landed a
-                            six-figure job with another company
+                            six-figure job with another company.
                         </p>
                     </div>
                 </div>
