@@ -1,7 +1,16 @@
 import { useState } from "react"
 
 export default function Overlay() {
-    const [show, setShow] = useState<boolean>(true)
+    const [show, setShow] = useState<boolean>(localStorage.getItem('overlayShow') !== 'no')
+    const [checked, setChecked] = useState<boolean>(false)
+
+    const handleCheckboxChange = () => setChecked(!checked)
+    const handleClose = () => {
+        if(checked){
+            localStorage.setItem('overlayShow', 'no')
+        }
+        setShow(false)
+    }
 
     return (
         show && (
@@ -10,7 +19,7 @@ export default function Overlay() {
                     <div
                         className="p-3 text-xl cursor-pointer m-8 font-bold absolute left-0 top-0 
                         hover:font-extrabold hover:text-amber-800 transition-all duration-300 hover:text-2xl hover:rotate-90"
-                        onClick={() => setShow(false)}
+                        onClick={handleClose}
                     >
                         X
                     </div>
@@ -40,11 +49,19 @@ export default function Overlay() {
                     >
                         From `Atomic Habits` by `James Clear`
                     </a>
+                    <label className="flex justify-center gap-3 select-none">
+                        <input
+                            type="checkbox"
+                            onChange={handleCheckboxChange}
+                            checked={checked}
+                        ></input>
+                        Don't show again
+                    </label>
                     <button
                         className="border-solid border-amber-500 bg-amber-600 border-4 rounded-lg p-1 select-none mb-3 font-bold w-2/3 self-center 
                         hover:bg-amber-500 hover:border-amber-700 hover:text-amber-700 hover:font-extrabold
                         transition-all duration-200"
-                        onClick={() => setShow(false)}
+                        onClick={handleClose}
                     >
                         Let's Go!
                     </button>
