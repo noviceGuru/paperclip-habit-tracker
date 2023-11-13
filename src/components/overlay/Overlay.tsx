@@ -23,7 +23,8 @@ export default function Overlay() {
                     >
                         X
                     </div>
-                    <div className="bg-lime-500 bg-opacity-80 felx ps-2 text-md sm:text-lg md:text-xl lg:text-2xl text-center">
+                    <div className="bg-lime-500 bg-opacity-80 felx p-5 text-md sm:text-lg md:text-xl lg:text-2xl text-center rounded-xl
+                    mx-12 md:mx-28 lg:mx-48 2xl:mx-56">
                         <p>
                             Every morning, Dyrsmid began with two jars on his
                             desk. One held 120 paper clips, while the other was
