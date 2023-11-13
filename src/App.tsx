@@ -38,6 +38,10 @@ function App() {
         }
     }
 
+    const onInputFocus = (e : React.FocusEvent<HTMLInputElement, Element>) => {
+        e.target.select()
+    }
+
     return (
         <div className="h-full relative min-w-[290px]">
             <Overlay/>
@@ -51,6 +55,7 @@ function App() {
                         value={inputValue}
                         onChange={onInputChange}
                         onKeyUp={onInputEnter}
+                        onFocus={onInputFocus}
                     />
                     <button
                         className="border-solid border-amber-200 bg-amber-200 border-4 rounded-lg p-1 select-none disabled:opacity-0 transition-all duration-150"
