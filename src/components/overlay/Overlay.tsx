@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Transition } from "@headlessui/react"
 
 export default function Overlay() {
     const [show, setShow] = useState<boolean>(localStorage.getItem('overlayShow') !== 'no')
@@ -12,8 +13,15 @@ export default function Overlay() {
         setShow(false)
     }
 
-    return (
-        show && (
+    return <Transition
+            show={show}
+            enter="transition-opacity duration-1000"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-1000"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+        >
             <div className="h-full bg-lime-500 bg-opacity-50 absolute top-0 flex flex-col justify-between z-10">
                 <div className="flex flex-col justify-center h-full">
                     <div
@@ -68,6 +76,5 @@ export default function Overlay() {
                     </button>
                 </div>
             </div>
-        )
-    )
+        </Transition>
 }

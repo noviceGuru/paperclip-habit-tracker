@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Transition } from "@headlessui/react"
 import Jar from "../jar/Jar"
 
 export default function JarContainer({
@@ -30,7 +31,15 @@ export default function JarContainer({
     return (
         <div className="flex flex-col gap-36 justify-center h-full self-center min-h-[200px]">
             <span className="self-center select-none h-6">
-            {!!totalNum && 
+            <Transition
+                show = {!!totalNum}
+                enter="transition-opacity duration-1000"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-1000"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+            >
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" value="" onClick={()=>setShowTodo(!showTodo)} className="sr-only peer" />
                     <div
@@ -40,9 +49,10 @@ export default function JarContainer({
                 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full 
                 after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-lime-300 text-center"
                     >
-                       {showTodo ? `${totalNum - right} To Do` : `${right} Done!` }
+                        {showTodo ? `${totalNum - right} To Do` : `${right} Done!` }
                     </div>
-                </label>}
+                </label>
+            </Transition>
             </span>
             <div className="flex gap-12 justify-center self-center h-1/4">
                 <Jar
