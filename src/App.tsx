@@ -43,7 +43,7 @@ function App() {
     }
 
     return (
-        <div className="h-full relative min-w-[290px]">
+        <div className="h-full relative min-w-[290px] bg-sky-100">
             <Overlay/>
             <div className="p-10 h-full flex flex-col gap-32">
                 <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl">
@@ -51,7 +51,7 @@ function App() {
                         How many are we doing today?
                     </span>
                     <input
-                        className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none"
+                        className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none bg-sky-100"
                         value={inputValue}
                         onChange={onInputChange}
                         onKeyUp={onInputEnter}

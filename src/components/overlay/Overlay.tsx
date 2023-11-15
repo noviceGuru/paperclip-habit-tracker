@@ -22,7 +22,7 @@ export default function Overlay() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
         >
-            <div className="h-full bg-lime-500 bg-opacity-50 absolute top-0 flex flex-col justify-between z-10">
+            <div className="h-full bg-sky-200 bg-opacity-50 absolute top-0 flex flex-col justify-between z-10">
                 <div className="flex flex-col justify-center h-full">
                     <div
                         className="p-3 text-xl cursor-pointer m-8 font-bold absolute left-0 top-0 
