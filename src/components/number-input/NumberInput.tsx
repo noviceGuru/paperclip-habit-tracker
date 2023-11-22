@@ -43,7 +43,7 @@ export default function NumberInput({
         e.target.select()
     }
     return (
-        <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl">
+        <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             <span className="flex items-center h-full">
                 How many are we doing today?
             </span>
