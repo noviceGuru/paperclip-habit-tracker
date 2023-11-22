@@ -1,6 +1,5 @@
 import { useState } from "react"
 import JarContainer from "../container/Container"
-import { generateUniqueArrays } from "../../utils/randomArrMaker"
 import NumberInput from "../number-input/NumberInput"
 
 export default function PaperClipTracker() {
