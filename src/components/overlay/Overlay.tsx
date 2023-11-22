@@ -52,7 +52,7 @@ export default function Overlay() {
                 <div className=" flex flex-col align-middle gap-8">
                     <a
                         className="top-7 bg-lime-950  text-white font-bold text-center text-2xl cursor-pointer p-3
-                        hover:text-amber-500 transition-colors duration-400"
+                        hover:text-amber-500 transition-colors duration-600"
                         href="https://jamesclear.com/atomic-habits"
                         target="_blank"
                     >
