@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite --host",
+    "start": "vite --host --port 4000",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "build": "tsc && vite build",
