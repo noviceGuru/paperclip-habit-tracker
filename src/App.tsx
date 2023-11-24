@@ -1,3 +1,5 @@
+/* global google */ 
+
 import { useEffect, useState } from "react"
 import Overlay from "./components/overlay/Overlay"
 import PaperClipTracker from "./components/paperClipTracker/PaperClipTracker"
@@ -30,7 +32,7 @@ type Response = {
 function App() {
     const [userInfo, setUserInfo] = useState<JwtPayload | null>(null)
     //@ts-ignore
-    const google = window.google
+    // const google = window.google
     const parseJwt = (token: string) => {
         var base64Url = token.split(".")[1]
         var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/")
@@ -54,7 +56,7 @@ function App() {
     }
 
     useEffect(() => {
-        /* global google */ //@ts-ignore
+        //@ts-ignore
         google.accounts.id.initialize({
             client_id:
                 "828095341543-smpnstki2jratd6egutt3e9ecnq1hsfa.apps.googleusercontent.com",
