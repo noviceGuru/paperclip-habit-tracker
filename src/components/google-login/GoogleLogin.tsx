@@ -28,9 +28,9 @@ type Response = {
 }
 
 export default function GoogleLogin() {
-    const [userInfo, setUserInfo] = useState<JwtPayload | null>(null)
-    
-    const parseJwt = (token: string) => {
+    const parseJwt = (token: string | null): JwtPayload | null => {
+        if (!token) return null
+
         var base64Url = token.split(".")[1]
         var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/")
         var jsonPayload = decodeURIComponent(
@@ -44,11 +44,17 @@ export default function GoogleLogin() {
         return JSON.parse(jsonPayload)
     }
 
+    const [userInfo, setUserInfo] = useState<JwtPayload | null>(
+        parseJwt(localStorage.getItem("google-token"))
+    )
+
     const handleCallbackResponse = (response: Response) => {
+        localStorage.setItem("google-token", response.credential)
         setUserInfo(parseJwt(response.credential))
     }
 
     const handleLogout = () => {
+        localStorage.removeItem('google-token')
         setUserInfo(null)
     }
 
