@@ -1,4 +1,4 @@
-/* global google */ 
+/* global google */
 
 import { useEffect, useState } from "react"
 import Overlay from "./components/overlay/Overlay"
@@ -75,13 +75,15 @@ function App() {
             {!!userInfo ? (
                 <button onClick={handleLogout}>Logout</button>
             ) : (
-                <div className="w-8 bg-red-700">
-                    <div id="signInDiv" className="w-8"></div>
-                </div>
+                <div id="signInDiv" className="w-9 overflow-hidden"></div>
             )}
             {userInfo && <h3>Welcome {userInfo.given_name.split(" ")[0]}</h3>}
             {userInfo && (
-                <img src={userInfo.picture} className="rounded-full" />
+                <img
+                    src={userInfo.picture}
+                    referrerPolicy="no-referrer"
+                    className="rounded-full"
+                />
             )}
             <Overlay />
             <PaperClipTracker />
