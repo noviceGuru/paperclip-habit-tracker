@@ -1,6 +1,7 @@
 /* global google */
 
 import { useEffect, useState } from "react"
+import { Transition } from "@headlessui/react"
 
 type JwtPayload = {
     iss: string
@@ -27,7 +28,7 @@ type Response = {
     select_by: string
 }
 
-export default function GoogleLogin() {
+export default function GoogleLogin({ show }: { show: boolean }) {
     const parseJwt = (token: string | null): JwtPayload | null => {
         if (!token) return null
 
@@ -54,15 +55,14 @@ export default function GoogleLogin() {
     }
 
     const handleLogout = () => {
-        localStorage.removeItem('google-token')
+        localStorage.removeItem("google-token")
         setUserInfo(null)
     }
 
     useEffect(() => {
         //@ts-ignore
         google.accounts.id.initialize({
-            client_id:
-                "828095341543-smpnstki2jratd6egutt3e9ecnq1hsfa.apps.googleusercontent.com",
+            client_id: "828095341543-smpnstki2jratd6egutt3e9ecnq1hsfa.apps.googleusercontent.com",
             callback: handleCallbackResponse,
         })
 
@@ -71,10 +71,10 @@ export default function GoogleLogin() {
             theme: "outline",
             size: "large",
         })
-    }, [userInfo])
+    }, [userInfo, show])
 
     return (
-        <div>
+        <div className={`p-8 absolute opacity-${show ? '100' : '0'} transition-opacity duration-1000 ease-in-out`}>
             {!!userInfo ? (
                 <button onClick={handleLogout}>Logout</button>
             ) : (
@@ -82,11 +82,7 @@ export default function GoogleLogin() {
             )}
             {userInfo && <h3>Welcome {userInfo.given_name.split(" ")[0]}</h3>}
             {userInfo && (
-                <img
-                    src={userInfo.picture}
-                    referrerPolicy="no-referrer"
-                    className="rounded-full"
-                />
+                <img src={userInfo.picture} referrerPolicy="no-referrer" className="rounded-full" />
             )}
         </div>
     )

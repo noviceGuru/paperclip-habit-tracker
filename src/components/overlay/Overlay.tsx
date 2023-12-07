@@ -1,8 +1,13 @@
 import { useState } from "react"
 import { Transition } from "@headlessui/react"
 
-export default function Overlay() {
-    const [show, setShow] = useState<boolean>(localStorage.getItem('overlayShow') !== 'no')
+export default function Overlay({
+    show,
+    setShow,
+}: {
+    show: boolean
+    setShow: React.Dispatch<React.SetStateAction<boolean>>
+}) {
     const [checked, setChecked] = useState<boolean>(false)
 
     const handleCheckboxChange = () => setChecked(!checked)
@@ -77,4 +82,4 @@ export default function Overlay() {
                 </div>
             </div>
         </Transition>
-}
+    }
