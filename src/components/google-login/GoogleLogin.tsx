@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 
+import LogoutSvg from "./LogoutSvg"
+
 type JwtPayload = {
     iss: string
     azp: string
@@ -76,14 +78,16 @@ export default function GoogleLogin({ show }: { show: boolean }) {
         <div className={`p-4 absolute h-20 justify-between
         flex w-full
         opacity-${show ? '100' : '0'} transition-opacity duration-1000 ease-in-out`}>
-            {!!userInfo ? (
-                <button onClick={handleLogout}>Logout</button>
-            ) : (
-                <div id="signInDiv" className="w-9 overflow-hidden"></div>
-            )}
-            {userInfo && <h3 className="items-center flex">Welcome {userInfo.given_name.split(" ")[0]}</h3>}
             {userInfo && (
                 <img src={userInfo.picture} referrerPolicy="no-referrer" className="rounded-full" />
+                )}
+            {userInfo && <h3 className="items-center flex">Welcome <strong className="ml-2">{" " + userInfo.given_name.split(" ")[0]}</strong></h3>}
+            {!!userInfo ? (
+                <button onClick={handleLogout}>
+                    <LogoutSvg className="w-8 h-8 cursor-pointer align-middle"/>
+                </button>
+            ) : (
+                <div id="signInDiv" className="w-9 overflow-hidden"></div>
             )}
         </div>
     )
