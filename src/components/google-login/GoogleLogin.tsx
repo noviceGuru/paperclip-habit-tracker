@@ -1,7 +1,6 @@
 /* global google */
 
 import { useEffect, useState } from "react"
-import { Transition } from "@headlessui/react"
 
 type JwtPayload = {
     iss: string
