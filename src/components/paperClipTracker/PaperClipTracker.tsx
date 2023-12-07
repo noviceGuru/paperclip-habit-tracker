@@ -8,7 +8,7 @@ export default function PaperClipTracker() {
     >([])
 
     return (
-        <div className="p-10 h-full flex flex-col gap-32">
+        <div className="p-10 h-full flex flex-col gap-32 bg-slate-500">
             <NumberInput setPaperClipPositions={setPaperClipPositions} />
             <JarContainer paperClipPositions={paperClipPositions} />
         </div>

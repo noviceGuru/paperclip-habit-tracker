@@ -43,12 +43,12 @@ export default function NumberInput({
         e.target.select()
     }
     return (
-        <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+        <label className="h-10 self-center gap-4 flex items-center flex-wrap justify-center text-center select-none sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-12">
             <span className="flex items-center h-full">
                 How many are we doing today?
             </span>
             <input
-                className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none bg-sky-100"
+                className="border-solid border-amber-200 border-4 rounded-lg w-12 text-center focus:border-red-600 focus:border-2 outline-none bg-slate-400"
                 value={inputValue}
                 onChange={onInputChange}
                 onKeyUp={onInputEnter}
