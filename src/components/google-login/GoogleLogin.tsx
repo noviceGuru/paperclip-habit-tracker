@@ -63,7 +63,7 @@ export default function GoogleLogin({ show }: { show: boolean }) {
     useEffect(() => {
         //@ts-ignore
         google.accounts.id.initialize({
-            client_id: "828095341543-smpnstki2jratd6egutt3e9ecnq1hsfa.apps.googleusercontent.com",
+            client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
             callback: handleCallbackResponse,
         })
 
