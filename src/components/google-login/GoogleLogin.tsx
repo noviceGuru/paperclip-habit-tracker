@@ -87,7 +87,7 @@ export default function GoogleLogin({ show }: { show: boolean }) {
                     <LogoutSvg className="w-8 h-8 cursor-pointer align-middle lg:w-12 lg:h-12 2xl:w-18 2xl:h-18"/>
                 </button>
             ) : (
-                <div id="signInDiv" className="w-9 overflow-hidden"></div>
+                <div id="signInDiv" className="overflow-hidden"></div>
             )}
         </div>
     )
