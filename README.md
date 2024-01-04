@@ -1,8 +1,9 @@
 # PaperClip Habit Tracker
 
 Keep track of "how many" you've done today, by [moving paperclips from a jar to another](https://noviceguru.github.io/paperclip-habit-tracker/).
-
+<div style='display: flex; justify-content: center; align-items: center;'>
 <img src="./src//assets//preview.gif" width="20%">
+</div>
 
 
 
