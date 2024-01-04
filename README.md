@@ -2,7 +2,7 @@
 
 Keep track of "how many" you've done today, by [moving paperclips from a jar to another](https://noviceguru.github.io/paperclip-habit-tracker/).
 
-![paperclip preview](./src/assets/preview.gif)
+<img src="./src//assets//preview.gif" width="20%">
 
 
 
