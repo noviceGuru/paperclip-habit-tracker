@@ -76,20 +76,20 @@ export default function GoogleLogin({ show }: { show: boolean }) {
 
     return (
         <div
-            className={`p-6 absolute h-20 justify-between
-                flex w-full pr-16 sm:pr-20 md:pr-22 lg:pr-24
+            className={`p-6 absolute justify-between
+                flex w-full pr-20 sm:pr-24 md:pr-28 lg:pr-32
                 opacity-${show ? "100" : "0"} transition-opacity duration-1000 ease-in-out`}
         >
             {userInfo && (
                 <img
                     src={userInfo.picture}
                     referrerPolicy="no-referrer"
-                    className="rounded-full lg:w-20 lg:h-20 2xl:w-30 2xl:h-30"
+                    className="rounded-full w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 2xl:w-30 2xl:h-30"
                 />
             )}
             {userInfo && (
                 <h3 className="items-center flex lg:text-lg xl:text-xl 2xl:text-2xl">
-                    Welcome{" "}
+                    Welcome
                     <strong className="ml-2">{" " + userInfo.given_name.split(" ")[0]}</strong>
                 </h3>
             )}
@@ -98,7 +98,7 @@ export default function GoogleLogin({ show }: { show: boolean }) {
                     <LogoutSvg className="w-8 h-8 cursor-pointer align-middle md:w-10 md:h-10 lg:w-12 lg:h-12 2xl:w-18 2xl:h-18" />
                 </button>
             ) : (
-                <div id="signInDiv" className="overflow-hidden"></div>
+                <div id="signInDiv"></div>
             )}
         </div>
     )
