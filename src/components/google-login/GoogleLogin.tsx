@@ -98,7 +98,7 @@ export default function GoogleLogin({ show }: { show: boolean }) {
                     <LogoutSvg className="w-8 h-8 cursor-pointer align-middle md:w-10 md:h-10 lg:w-12 lg:h-12 2xl:w-18 2xl:h-18" />
                 </button>
             ) : (
-                <div id="signInDiv"></div>
+                <div id="signInDiv" className="sm:mt-2 md:mt-4"></div>
             )}
         </div>
     )
